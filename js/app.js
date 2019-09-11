@@ -8,22 +8,27 @@ blue.toLowerCase()
 
     if(blue = 'yes'){
         alert('Me too!')
+        console.log('Green is also cool')
     }
     else if(blue = 'y'){
         alert('Good choice')
+        console.log('Pink is also cool')
     }
     else
         {alert('You should like blue')
     };
+    
 
     var cat = prompt('Do you have a cat?')
     cat.toLowerCase()
 
     if(cat = 'yes'){
         alert('Cats are great')
+        console.log('I like dogs too')
     }
     else if(cat = 'y'){
         alert('you should get a second cat')
+        console.log('Someday I want a dog too')
     }
     else{
         alert 

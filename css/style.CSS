@@ -1,0 +1,15 @@
+header{
+background-color:lightblue;
+text-align:center;
+color:darkslategray;
+}
+li{display:inline;
+    padding:35px;
+    color:darkslategray;
+}
+body{
+    background-color: aquamarine;
+    border:4px solid yellow;
+    color:darkslateblue;
+}
+
