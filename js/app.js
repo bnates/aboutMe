@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-var name = prompt('What is your name?')
-alert('Hello ' + name + ' welcome to my about me page!')
+var name = prompt('What is your name?');
+alert('Hello ' + name + ' welcome to my about me page!');
 var blue = prompt('do you like blue?');
 
 blue.toLowerCase()
