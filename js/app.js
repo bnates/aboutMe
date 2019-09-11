@@ -53,9 +53,9 @@ if(sleep === 'yes' || sleep === 'y'){
 var food = prompt('Do I like to bake and cook?');
 food = food.toLowerCase();
 if(food === 'yes' || food === 'y'){
-  alert('Me tooI have been cooking and baking since I was three!');
+  alert('I have been cooking and baking since I was three!');
   console.log('I think ' + username + ' wants me to feed them now');
-}else{
+  }else{
   alert('Nope. I do cook and bake. It relaxes me.');
   console.log('I hate doing dishes though');
 }
@@ -78,3 +78,4 @@ while(guess < 4) {
 if (guess === 4){
   alert('The correct answer is 6. Better luck next time.');
 }
+
