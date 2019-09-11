@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 'use strict';
 
 var username = prompt('What is your name?');
@@ -59,4 +60,21 @@ if(food === 'yes' || food === 'y'){
   console.log('I hate doing dishes though');
 }
 
-
+//loop to run so that they can guess 6
+var guess = 0;
+while(guess < 4) {
+  var number = parseInt(prompt('Can you guess my favorite number?'));
+  if(number === 6){
+    alert('Great job!');
+    break;
+  } else if(number < 6) {
+    alert('That number is too small. Try again.');
+    guess++;
+  } else if(number > 6) {
+    alert('That number is too big. Try again.');
+    guess++;
+    }
+}
+if (guess === 4){
+  alert('The correct answer is 6. Better luck next time.');
+}
