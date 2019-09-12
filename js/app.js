@@ -84,18 +84,19 @@ var answer = 0;
 var petname = ['munchkin', 'munchbutt', 'munchies', 'munchinator', 'bratcat'];
 var petquestion = prompt('Can you guess what I call my cat?').toLowerCase();
 while(answer < 5){
-  
-    for(var i = 0; i< petname.length; i++){
+
+  for(var i = 0; i< petname.length; i++){
       if (petquestion === petname[i]){
         alert('You are right!');
         break;
       } else {
         petquestion = prompt('That is incorrect; please try again');
         answer++;
-      }
+     }
     }
-  
+
   }
-// if(answer ===5){
-
-
+  if(answer ===5){
+    alert('Good attempt. Here are all possible answers '+
+    petname);
+  }
