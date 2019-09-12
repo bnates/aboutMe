@@ -10,7 +10,7 @@ var blue = prompt('Do I like blue?');
 blue = blue.toLowerCase();
 
 if(blue === 'yes' || blue === 'y'){
-  alert('Indeed I do, I aslo like pink and green');
+  alert('Indeed I do, I also like pink and green');
   console.log('answer was correct');
 } else
 {alert('Oops! I love blue, good try');
@@ -36,7 +36,7 @@ if(fun === 'yes' || fun==='y'){
   console.log('One game to rule them all');
 }else{
   alert('It is just the one game actually. Cause I am weird like that.');
-  console.log('They thought I was deverse with my game play');
+  console.log('They thought I was diverse with my game play');
 }
 
 var sleep = prompt('Do I love sleeping in and nap taking?');
@@ -46,7 +46,7 @@ if(sleep === 'yes' || sleep === 'y'){
   alert('Sleep is the best and I LOVE it');
   console.log('sleep is bae');
 }else{
-  alert('Oops! Thank you for thinking that I am not a human sloth, but unfortunatly I am');
+  alert('Oops! Thank you for thinking that I am not a human sloth, but unfortunately I am');
   console.log('I am sloth');
 }
 
@@ -103,7 +103,7 @@ while(answer <= 5 && !gotName){
       }
   }
     if (!gotName){
-      if(answer ===5){
+      if(answer === 5 ){
         alert('Good attempt. Here are all possible answers '+
         petname);
         console.log('I like to have pet names for my pet');
