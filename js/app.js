@@ -10,7 +10,7 @@ var blue = prompt('Do I like blue?');
 blue = blue.toLowerCase();
 
 if(blue === 'yes' || blue === 'y'){
-  alert('Indeed I do, I aslo like pink and green');
+  alert('Indeed I do, I also like pink and green');
   console.log('answer was correct');
 } else
 {alert('Oops! I love blue, good try');
@@ -36,7 +36,7 @@ if(fun === 'yes' || fun==='y'){
   console.log('One game to rule them all');
 }else{
   alert('It is just the one game actually. Cause I am weird like that.');
-  console.log('They thought I was deverse with my game play');
+  console.log('They thought I was diverse with my game play');
 }
 
 var sleep = prompt('Do I love sleeping in and nap taking?');
@@ -46,7 +46,7 @@ if(sleep === 'yes' || sleep === 'y'){
   alert('Sleep is the best and I LOVE it');
   console.log('sleep is bae');
 }else{
-  alert('Oops! Thank you for thinking that I am not a human sloth, but unfortunatly I am');
+  alert('Oops! Thank you for thinking that I am not a human sloth, but unfortunately I am');
   console.log('I am sloth');
 }
 
@@ -62,21 +62,26 @@ if(food === 'yes' || food === 'y'){
 
 //loop to run so that they can guess 6
 var guess = 0;
-while(guess < 4) {
+var isCorrect = false;
+while(guess <= 4 && !isCorrect) {
   var number = parseInt(prompt('Can you guess my favorite number?'));
   if(number === 6){
     alert('Great job!');
     console.log('Wonderful');
-    break;
+    isCorrect = true;
   } else if(number < 6) {
     alert('That number is too small. Try again.');
     console.log('Guess again');
     guess++;
-  } else if(number > 6) {
+    } else if(number > 6) {
     alert('That number is too big. Try again.');
     console.log('Numbers are cool');
     guess++;
-    }
+  } else{
+    alert('please enter a number');
+    console.log('User didnt understand the question');
+    guess++;
+  }
 }
 if (guess === 4){
   alert('The correct answer is 6. Better luck next time.');
@@ -86,31 +91,33 @@ if (guess === 4){
 
 var answer = 0;
 var petname = ['munchkin', 'munchbutt', 'munchies', 'munchinator', 'bratcat'];
-var petquestion = prompt('Can you guess what I call my cat?').toLowerCase();
-while(answer < 5){
-
+var gotName = false;
+while(answer <= 5 && !gotName){
+  var petquestion = prompt('Can you guess what I call my cat?').toLowerCase();
   for(var i = 0; i< petname.length; i++){
       if (petquestion === petname[i]){
         alert('You are right!');
         console.log('I have many names for my cat');
-        break;
-      } else {
+        gotName = true;
+        i = petname.length;
+      }
+  }
+    if (!gotName){
+      if(answer === 5 ){
+        alert('Good attempt. Here are all possible answers '+
+        petname);
+        console.log('I like to have pet names for my pet');
+      }else
         petquestion = prompt('That is incorrect; please try again');
         console.log('Better luck next time');
-        answer++;
-     }
-    }
+     } answer++;
+}
 
-  }
-  if(answer ===5){
-    alert('Good attempt. Here are all possible answers '+
-    petname);
-    console.log('I like to have pet names for my pet');
-  }
   var pointtotal = 0;
   var possible = [blue, cat, fun, sleep, food, guess, petname];
-for(var i = 0; i < possible.length; i++){
-   if(possible === 'yes' || possible === 'y'){pointtotal++};
+for(var j = 0; j < possible.length; j++){
+   if(possible === 'yes' || possible === 'y'){(pointtotal++);
   }
   alert('All done you got ' + pointtotal + ' out of 7');
   console.log('Tests are best when the points dont matter');
+}
