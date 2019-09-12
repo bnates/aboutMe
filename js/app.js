@@ -66,17 +66,21 @@ while(guess < 4) {
   var number = parseInt(prompt('Can you guess my favorite number?'));
   if(number === 6){
     alert('Great job!');
+    console.log('Wonderful');
     break;
   } else if(number < 6) {
     alert('That number is too small. Try again.');
+    console.log('Guess again');
     guess++;
   } else if(number > 6) {
     alert('That number is too big. Try again.');
+    console.log('Numbers are cool');
     guess++;
     }
 }
 if (guess === 4){
   alert('The correct answer is 6. Better luck next time.');
+  console.log('We cant always be right. But that would be kinda nice');
 }
 
 
@@ -88,9 +92,11 @@ while(answer < 5){
   for(var i = 0; i< petname.length; i++){
       if (petquestion === petname[i]){
         alert('You are right!');
+        console.log('I have many names for my cat');
         break;
       } else {
         petquestion = prompt('That is incorrect; please try again');
+        console.log('Better luck next time');
         answer++;
      }
     }
@@ -99,4 +105,12 @@ while(answer < 5){
   if(answer ===5){
     alert('Good attempt. Here are all possible answers '+
     petname);
+    console.log('I like to have pet names for my pet');
   }
+  var pointtotal = 0;
+  var possible = [blue, cat, fun, sleep, food, guess, petname];
+for(var i = 0; i < possible.length; i++){
+   if(possible === 'yes' || possible === 'y'){pointtotal++};
+  }
+  alert('All done you got ' + pointtotal + ' out of 7');
+  console.log('Tests are best when the points dont matter');
