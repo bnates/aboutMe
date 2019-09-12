@@ -1,5 +1,6 @@
 /* eslint-disable indent */
 'use strict';
+var pointTotal = 0;
 
 var username = prompt('What is your name?');
 alert('Hello ' + username + ' welcome to my about me page! First lets do a quick test to see how well you know me.');
@@ -12,6 +13,7 @@ blue = blue.toLowerCase();
 if(blue === 'yes' || blue === 'y'){
   alert('Indeed I do, I also like pink and green');
   console.log('answer was correct');
+  pointTotal++;
 } else
 {alert('Oops! I love blue, good try');
   console.log('answer was incorrect');
@@ -24,6 +26,7 @@ cat = cat.toLowerCase();
 if(cat === 'yes' || cat === 'y'){
   alert('Cats are great and right now I only have one');
   console.log('correct answer for cat question');
+  pointTotal++;
 }else{
   alert('Turns out I have a cat. She is a  cutie and I spoil her');
 }
@@ -34,6 +37,7 @@ fun = fun.toLowerCase();
 if(fun === 'yes' || fun==='y'){
   alert('That is right! I only ever play don/t starve with the DLC shipwrecked');
   console.log('One game to rule them all');
+  pointTotal++;
 }else{
   alert('It is just the one game actually. Cause I am weird like that.');
   console.log('They thought I was diverse with my game play');
@@ -45,6 +49,7 @@ sleep = sleep.toLowerCase();
 if(sleep === 'yes' || sleep === 'y'){
   alert('Sleep is the best and I LOVE it');
   console.log('sleep is bae');
+  pointTotal++;
 }else{
   alert('Oops! Thank you for thinking that I am not a human sloth, but unfortunately I am');
   console.log('I am sloth');
@@ -69,6 +74,7 @@ while(guess <= 4 && !isCorrect) {
     alert('Great job!');
     console.log('Wonderful');
     isCorrect = true;
+    pointTotal++;
   } else if(number < 6) {
     alert('That number is too small. Try again.');
     console.log('Guess again');
@@ -96,28 +102,19 @@ while(answer <= 5 && !gotName){
   var petquestion = prompt('Can you guess what I call my cat?').toLowerCase();
   for(var i = 0; i< petname.length; i++){
       if (petquestion === petname[i]){
-        alert('You are right!');
         console.log('I have many names for my cat');
         gotName = true;
         i = petname.length;
+        pointTotal++;
       }
   }
     if (!gotName){
-      if(answer === 5 ){
-        alert('Good attempt. Here are all possible answers '+
-        petname);
-        console.log('I like to have pet names for my pet');
-      }else
-        petquestion = prompt('That is incorrect; please try again');
-        console.log('Better luck next time');
-     } answer++;
-}
-
-  var pointtotal = 0;
-  var possible = [blue, cat, fun, sleep, food, guess, petname];
-for(var j = 0; j < possible.length; j++){
-   if(possible === 'yes' || possible === 'y'){(pointtotal++);
+      alert('You failed! Try again or i wont show you cat pictures');
+      answer++;
+    } else if (gotName){
+      alert('You did it!');
+    }
   }
-  alert('All done you got ' + pointtotal + ' out of 7');
-  console.log('Tests are best when the points dont matter');
-}
+ alert('All done you got ' + pointTotal + ' out of 7');
+ console.log('Tests are best when the points dont matter');
+
